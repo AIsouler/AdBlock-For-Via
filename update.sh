@@ -73,6 +73,5 @@ sort_and_optimum_adblock "${Rules_Folder}/AdBlockForVia.txt"
 #写入头信息
 write_head "${Rules_Folder}/AdBlockForVia.txt" "AdBlockForVia" "适合Via浏览器的广告拦截规则，合并自：混合规则精简版、轻量广告拦截规则、去APP下载提示规则、CJX's Annoyance List、Adguard Cookie" && echo "※`date +'%F %T'` 规则合并完成！"
 
+#删除临时目录
 rm -rf "`pwd`/temple"
-#更新README信息
-update_README_info
