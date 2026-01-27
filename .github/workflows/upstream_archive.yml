@@ -32,10 +32,10 @@ jobs:
           UPSTREAM_COMMITS=$(git log upstream/main -100 --reverse --pretty=%H)
 
           for commit in $UPSTREAM_COMMITS; do
-            MESSAGE=$(git log -1 --pretty=%B $commit)
+            SUBJECT=$(git log -1 --pretty=%s $commit)
             
-            if [[ "$MESSAGE" == *"Rules update"* ]] || [[ "$MESSAGE" == *"clear"* ]]; then
-              echo "跳过自动化提交: $MESSAGE"
+            if [[ "$SUBJECT" == "Rules update" ]] || [[ "$SUBJECT" == "clear" ]]; then
+              echo "跳过自动化提交: $SUBJECT"
               continue
             fi
             
