@@ -4,6 +4,12 @@
 
 ---
 
+## 规则链接
+
+```txt
+https://raw.githubusercontent.com/AIsouler/AdBlock-For-Via/refs/heads/main/Rules/AdBlockForVia.txt
+```
+
 ## 上游规则
 
 > 感谢各位大佬❤ (ɔˆз(ˆ⌣ˆc)
