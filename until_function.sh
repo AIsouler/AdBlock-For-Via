@@ -1,13 +1,6 @@
 #!/bin/sh
 export PATH="`pwd`:${PATH}"
 
-#移除Adguard_Chinese的秋风规则
-function remove_AWAvenue_Ads_Rule_Filter(){
-local file="${1}"
-test ! -f "${file}" && return
-busybox sed -i "/AWAvenue Ads Rule/,/^$/d" "${file}"
-}
-
 #下载Adblock规则
 function download_link(){
 local IFS=$'\n'
@@ -17,14 +10,11 @@ test "${target_dir}" = "" && target_dir="`pwd`/temple/download_Rules"
 mkdir -p "${target_dir}"
 
 list='
-https://easylist-downloads.adblockplus.org/antiadblockfilters.txt|antiadblockfilters.txt
-https://easylist-downloads.adblockplus.org/easylist.txt|easylist.txt
-https://easylist-downloads.adblockplus.org/easylistchina.txt|easylistchina.txt
-https://raw.githubusercontent.com/easylist/easylist/refs/heads/master/easylist/easylist_adservers_popup.txt|easylist_adservers_popup.txt
-https://filters.adtidy.org/android/filters/15_optimized.txt|adguard_optimized.txt
-https://filters.adtidy.org/extension/ublock/filters/224.txt|Adguard_Chinese.txt
-https://filters.adtidy.org/extension/ublock/filters/11.txt|Adguard_mobile.txt
-https://filters.adtidy.org/extension/ublock/filters/2_optimized.txt|AdGuard_Base_filter_dns.txt
+https://raw.githubusercontent.com/lingeringsound/adblock_auto/refs/heads/main/Rules/adblock_auto_lite.txt|adblock_auto_lite.txt
+https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt|jiekouAD.txt
+https://raw.githubusercontent.com/Noyllopa/NoAppDownload/master/NoAppDownload.txt|NoAppDownload.txt
+https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt|cjx-annoyance.txt
+https://filters.adtidy.org/extension/ublock/filters/18_optimized.txt|Adguard_Cookie.txt
 '
 
 for i in ${list}
@@ -34,7 +24,6 @@ test "$(echo "${i}" | grep -E '^#' )" && continue
 		URL=`echo "${i}" | cut -d '|' -f1`
 	test ! -f "${target_dir}/${name}" && curl -k -L -o "${target_dir}/${name}" "${URL}" >/dev/null 2>&1 && echo "※ `date +'%F %T'` ${name} 下载成功！"
 busybox sed -i 's/\\n/换行符正则表达式nn/g' "${target_dir}/${name}"
-test "${name}" = "Adguard_Chinese.txt" && remove_AWAvenue_Ads_Rule_Filter "${target_dir}/${name}"
 dos2unix "${target_dir}/${name}" >/dev/null 2>&1
 done
 }
@@ -53,13 +42,8 @@ cat << key > "${file}"
 ! Expires: 12 hours (update frequency)
 ! Last modified: `date +'%F %T'`
 ! Total Count: ${count}
-! Blocked Filters: ${count}
 ! Description: ${Description}
-! Homepage: https://lingeringsound.github.io/adblock_auto
-! GitHub Homepage: https://github.com/lingeringsound/adblock_auto
-! Gitlink Homepage: https://www.gitlink.org.cn/keytoolazy/adblock_auto
-! Github Raw Link: https://lingeringsound.github.io/adblock_auto/Rules/${file##*/}
-! Github Raw gh Link: https://hub.gitmirror.com/raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/${file##*/}
+! Homepage: https://github.com/AIsouler/AdBlock-For-Via
 
 key
 echo "${original_file}" >> "${file}"
@@ -577,41 +561,20 @@ function update_README_info(){
 local file="`pwd`/README.md"
 test -f "${file}" && rm -rf "${file}"
 cat << key > "${file}"
-# 混合规则
-### 自动更新(`date +'%F %T'`)
+# AdBlock-For-Via
 
+自用的适合Via浏览器的去广告规则，修改自上游仓库，移除混合规则全量版生成逻辑，仅生成适合Via的精简版规则，相比上游混合规则精简版新增了几个规则源
 
-| 名称 | GIthub订阅链接 | Github加速订阅链接 | ~~GitCode订阅链接(死了)~~ | ~~Gitlink订阅链接(死了)~~ |
-| :-- | :-- | :-- | :-- | :-- |
-| 混合规则(自动更新) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt) | [订阅](https://hub.gitmirror.com/raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto.txt)~~ | ~~[订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335)~~ |
-| 混合规则精简版(自动更新) | [订阅](https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt) | [订阅](https://hub.gitmirror.com/raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt) | ~~[订阅](https://gitcode.net/weixin_45617236/adblock_auto/-/raw/main/Rules/adblock_auto_lite.txt)~~ | ~~[订阅](https://cdn09022024.gitlink.org.cn/api/v1/repos/keytoolazy/adblock_auto/raw/Rules/adblock_auto_lite.txt?ref=main&access_token=9aa2be1250ca725d0ef1b1f638fb3de408a11335)~~ |
+---
 
+## 上游规则
 
-### 拦截器说明
-> #### [混合规则(自动更新)](https://lingeringsound.github.io/adblock_auto/Rules/adblock_auto.txt) 适用于 \`Adguard\` / \`Ublock Origin\` / \`Adblock Plus\`(用Adblock Plus源码编译的软件也支持，例如[嗅觉浏览器](https://www.coolapk.com/apk/com.hiker.youtoo) ) 支持复杂语法的过滤器，或者能兼容大规则的浏览器例如 [X浏览器](https://www.coolapk.com/apk/com.mmbox.xbrowser)
+> 感谢各位大佬❤ (ɔˆз(ˆ⌣ˆc)
 
-> #### [混合规则精简版(自动更新)](https://lingeringsound.github.io/adblock_auto/Rules/adblock_auto_lite.txt) 适用于轻量的浏览器，例如  [VIA](https://www.coolapk.com/apk/mark.via)  / [Rian](https://www.coolapk.com/apk/com.rainsee.create) / [B仔浏览器](https://www.coolapk.com/apk/com.huicunjun.bbrowser)
-
-
-### 上游规则
-#### 感谢各位大佬❤ (ɔˆз(ˆ⌣ˆc)
-<details>
-<summary>点击查看上游规则</summary>
-<ul>
-<li> <a href="https://easylist-downloads.adblockplus.org/easylist.txt" target="_blank" > Easylist </a> </li>
-<li> <a href="https://easylist-downloads.adblockplus.org/easylistchina.txt" target="_blank" > EasylistChina </a> </li>
-<li> <a href="https://raw.githubusercontent.com/easylist/easylist/refs/heads/master/easylist/easylist_adservers_popup.txt" target="_blank" > Easylist adservers popup </a> </li>
-<li> <a href="https://easylist-downloads.adblockplus.org/antiadblockfilters.txt" target="_blank" > Antiadblockfilters </a> </li>
-<li> <a href="https://filters.adtidy.org/android/filters/15_optimized.txt" target="_blank" > Adguard DNS optimized </a> </li>
-<li> <a href="https://filters.adtidy.org/extension/ublock/filters/11.txt" target="_blank" > Adguard mobile </a> </li>
-<li> <a href="https://filters.adtidy.org/extension/ublock/filters/224.txt" target="_blank" > Adguard Chinese </a> </li>
-<li> <a href="https://filters.adtidy.org/extension/ublock/filters/2_optimized.txt" target="_blank" > AdGuard Base filter </a> </li>
-</ul>
-</details>
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=lingeringsound/adblock_auto&type=Date)](https://star-history.com/#lingeringsound/adblock_auto&Date)
-
+- [混合规则精简版](https://raw.githubusercontent.com/lingeringsound/adblock_auto/refs/heads/main/Rules/adblock_auto_lite.txt)
+- [轻量广告拦截规则](https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt)
+- [去APP下载提示规则](https://raw.githubusercontent.com/Noyllopa/NoAppDownload/master/NoAppDownload.txt)
+- [CJX's Annoyance List](https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt)
+- [Adguard Cookie](https://filters.adtidy.org/extension/ublock/filters/18_optimized.txt)
 key
 }

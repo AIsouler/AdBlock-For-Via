@@ -1,0 +1,48 @@
+name: sync_upstream_folder
+
+on:
+  schedule:
+    - cron: '0 22,10 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    env:
+      TZ: Asia/Shanghai
+
+    steps:
+      - name: Checkout target repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
+
+      - name: Sync base folder from upstream
+        run: |
+          UPSTREAM_REPO="https://github.com/lingeringsound/adblock_auto"
+          UPSTREAM_BRANCH="main"
+
+          git clone --depth 1 $UPSTREAM_REPO upstream_temp
+
+          mkdir -p ./base ./white_list
+
+          rsync -av --delete upstream_temp/base/ ./base/
+          rsync -av --delete upstream_temp/white_list/ ./white_list/
+
+          rm -rf upstream_temp
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add base/ white_list/
+
+          if git diff --staged --quiet; then
+            echo "No changes detected"
+          else
+            git commit -m "chore: Sync upstream $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S') BJT"
+            git push
+          fi
