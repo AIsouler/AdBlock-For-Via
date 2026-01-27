@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: mh/vA1/oIGkSfos1Ji7tMg
+! Checksum: 3ObgffjHrKoFO6d5/U+elA
 ! Title: AdBlockForVia
-! Version: 20260127155536
+! Version: 20260127161150
 ! Expires: 12 hours (update frequency)
-! Last modified: 2026-01-27 15:55:36
+! Last modified: 2026-01-27 16:11:50
 ! Total Count: 79237
 ! Description: 适合Via浏览器的广告拦截规则，合并自：混合规则精简版、轻量广告拦截规则、去APP下载提示规则、CJX's Annoyance List、Adguard Cookie
 ! Homepage: https://github.com/AIsouler/AdBlock-For-Via
