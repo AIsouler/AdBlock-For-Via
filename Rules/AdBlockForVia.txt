@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Checksum: B+bcrIZNpk/wG5Z1Ai4TXw
+! Checksum: IFABW7UYJLSPblVBOTKa5g
 ! Title: AdBlockForVia
-! Version: 20260127202514
+! Version: 20260127205645
 ! Expires: 12 hours (update frequency)
-! Last modified: 2026-01-27 20:25:14
-! Total Count: 79346
+! Last modified: 2026-01-27 20:56:45
+! Total Count: 79347
 ! Description: 适合Via浏览器的广告拦截规则，合并自：混合规则精简版、轻量广告拦截规则、去APP下载提示规则、CJX's Annoyance List、Adguard Cookie
 ! Homepage: https://github.com/AIsouler/AdBlock-For-Via
 
@@ -54923,7 +54923,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||zzzyk.com/js/
 !<<<<<域名规则 结束>>>>>
 
-!<<<<<网站单独规则>>>>>16462
+!<<<<<网站单独规则>>>>>16463
 $third-party,domain=hentai2read.com|porn-tube-club.com
 $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.xyz
 $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube8.fr|xtube.com|youporn.com|youporngay.com
@@ -57466,6 +57466,7 @@ bolshoibelarus.by###Mod368
 bolumsonucanavari.com,donanimhaber.com##.cookie-kutu
 boluobjektif.com##.reklam-ortala
 bon.ua,metromodels.com,besplatka.ua###cookie-bottom
+bonbon.hr##div[id^="gdpr"]
 bonprix-wa.be,bonprix-fl.be,bonprix.nl,bonprix.cz,bonprix.at,bonprix.se,bonprix.ch,bonprix.it,bonprix.fr###cookie-bar-2019
 boobieblog.com,colamanga.com,colamanhua.com,d53px.com,dm99.me,imgadult.com,jhycxcl.com,ledlmw.com,lolhentai.net,picdollar.com,porngames.com,thenipslip.com,wetpussygames.com,xvideos.name,yhdm86.com,yhdmp.net,yhpdm.com##canvas
 boobyday.com,gonewildday.com,poppornday.com###page > .menu-left:has(> div.btnhome)
