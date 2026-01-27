@@ -559,8 +559,7 @@ function fixed_Rules_error(){
 #更新README信息
 function update_README_info(){
 local file="`pwd`/README.md"
-test -f "${file}" && rm -rf "${file}"
-cat << key > "${file}"
+cat << 'key' > "${file}"
 # AdBlock-For-Via
 
 自用的适合Via浏览器的去广告规则，修改自上游仓库，移除混合规则全量版生成逻辑，仅生成适合Via的精简版规则，相比上游混合规则精简版新增了几个规则源
@@ -591,4 +590,5 @@ https://cdn.jsdelivr.net/gh/AIsouler/AdBlock-For-Via@main/Rules/AdBlockForVia.tx
 - [CJX's Annoyance List](https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt)
 - [Adguard Cookie](https://filters.adtidy.org/extension/ublock/filters/18_optimized.txt)
 key
+echo "README.md 已成功更新"
 }
