@@ -21,7 +21,7 @@ jobs:
 
       - name: Sync base folder from upstream
         run: |
-          UPSTREAM_REPO="https://github.com/lingeringsound/adblock_auto"
+          UPSTREAM_REPO="https://github.com/lingeringsound/adblock_auto.git"
           UPSTREAM_BRANCH="main"
 
           git clone --depth 1 $UPSTREAM_REPO upstream_temp

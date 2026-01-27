@@ -1,0 +1,57 @@
+name: sync_manual_commits
+
+on:
+  schedule:
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+
+jobs:
+  cherry-pick-job:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Your Fork
+        uses: actions/checkout@v4
+        with:
+          ref: upstream-archive
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "History-Keeper"
+          git config user.email "actions@github.com"
+
+      - name: Fetch Upstream
+        run: |
+          git remote add upstream https://github.com/lingeringsound/adblock_auto.git
+          git fetch upstream main
+
+      - name: Process Commits
+        run: |
+          UPSTREAM_COMMITS=$(git log upstream/main -100 --reverse --pretty=%H)
+
+          for commit in $UPSTREAM_COMMITS; do
+            MESSAGE=$(git log -1 --pretty=%B $commit)
+            
+            if [[ "$MESSAGE" == *"Rules update"* ]] || [[ "$MESSAGE" == *"clear"* ]]; then
+              echo "跳过自动化提交: $MESSAGE"
+              continue
+            fi
+            
+            SUBJECT=$(git log -1 --pretty=%s $commit)
+            if git log --grep="$SUBJECT" -1 > /dev/null; then
+              echo "提交已存在，跳过: $SUBJECT"
+              continue
+            fi
+            
+            echo "正在同步手动提交: $SUBJECT"
+            if ! git cherry-pick $commit; then
+              echo "检测到冲突，跳过。"
+              git cherry-pick --abort
+            fi
+          done
+
+      - name: Push to Archive Branch
+        run: |
+          git push origin upstream-archive
