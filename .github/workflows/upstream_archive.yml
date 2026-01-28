@@ -29,26 +29,26 @@ jobs:
 
       - name: Process Commits
         run: |
-          UPSTREAM_COMMITS=$(git log upstream/main -100 --reverse --pretty=%H)
+          NEW_COMMITS=$(git rev-list --reverse --cherry-pick --right-only upstream-archive...upstream/main)
 
-          for commit in $UPSTREAM_COMMITS; do
+          for commit in $NEW_COMMITS; do
             SUBJECT=$(git log -1 --pretty=%s $commit)
             
             if [[ "$SUBJECT" == "Rules update" ]] || [[ "$SUBJECT" == "clear" ]]; then
-              echo "跳过自动化提交: $SUBJECT"
+              echo "跳过机器人提交: $SUBJECT"
               continue
             fi
             
-            SUBJECT=$(git log -1 --pretty=%s $commit)
-            if git log --grep="$SUBJECT" -1 > /dev/null; then
-              echo "提交已存在，跳过: $SUBJECT"
-              continue
-            fi
+            echo "发现新手动提交，尝试提取: $SUBJECT ($commit)"
             
-            echo "正在同步手动提交: $SUBJECT"
             if ! git cherry-pick $commit; then
-              echo "检测到冲突，跳过。"
-              git cherry-pick --abort
+              if git status | grep -q "nothing to commit"; then
+                echo "内容已存在，跳过该记录。"
+                git cherry-pick --abort
+              else
+                echo "检测到冲突冲突，跳过该记录。"
+                git cherry-pick --abort
+              fi
             fi
           done
 

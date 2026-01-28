@@ -43,6 +43,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes detected"
           else
-            git commit -m "chore: sync upstream $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S') BJT"
+            git commit -m "sync upstream $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S') BJT"
             git push
           fi
