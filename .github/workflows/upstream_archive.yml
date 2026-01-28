@@ -46,7 +46,7 @@ jobs:
                 echo "内容已存在，跳过该记录。"
                 git cherry-pick --abort
               else
-                echo "检测到冲突冲突，跳过该记录。"
+                echo "检测到冲突，跳过该记录。"
                 git cherry-pick --abort
               fi
             fi
