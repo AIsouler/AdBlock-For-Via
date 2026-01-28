@@ -1,15 +1,15 @@
 [Adblock Plus 2.0]
-! Checksum: KLBFmZdY6hVSioiEX/PWOQ
+! Checksum: XodsvS3VGDRUUPo1y2TPzA
 ! Title: AdBlockForVia
-! Version: 20260128085558
+! Version: 20260128150044
 ! Expires: 12 hours (update frequency)
-! Last modified: 2026-01-28 08:55:58
-! Total Count: 79577
+! Last modified: 2026-01-28 15:00:44
+! Total Count: 79580
 ! Description: 适合Via浏览器的广告拦截规则，合并自：混合规则精简版、轻量广告拦截规则、去APP下载提示规则、CJX's Annoyance List、Adguard Cookie
 ! Homepage: https://github.com/AIsouler/AdBlock-For-Via
 
 
-!<<<<<通配符规则>>>>>5137
+!<<<<<通配符规则>>>>>5135
 $third-party,domain=hentai2read.com|porn-tube-club.com
 $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.xyz
 $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube8.fr|xtube.com|youporn.com|youporngay.com
@@ -2458,7 +2458,6 @@ $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube
 /code/native.js?h=$script
 /code/pop_cpf.
 /code/popjs.
-/common-files/plugin/cookie/jquery.cookie$domain=jms-teijin.co.jp
 /common/*/common/*.js$script,third-party
 /common/ad.js$script
 /common_ad.js$script
@@ -2546,7 +2545,6 @@ $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube
 /cookieconsentmanager/modernCookieModal.js$domain=swiatbaterii.pl|batteryempire.de|batteryempire.fr|batteryempire.it|batteryempire.co.uk|batteryempire.es|batteryempire.sk|batteryempire.nl|batteryempire.lt|batteryempire.hu|batteryempire.ro|batteryempire.pt|batteryempire.dk|batteryempire.be|batteryempire.se|batteryempire.fi|batteryempire.gr
 /cookiecontrol-$domain=~msi.com
 /cookiecontrol.js
-/cookiecontroller.js
 /cookiecutter.js
 /cookiedirective*.js
 /cookiedisclosure.
@@ -5149,7 +5147,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 |javascript:*window.location
 !<<<<<通配符规则 结束>>>>>
 
-!<<<<<域名规则>>>>>49997
+!<<<<<域名规则>>>>>49996
 |http://$image,third-party,domain=pornhub.com|redtube.com|redtube.net|tube8.com|tube8.es|tube8.fr|youporn.com|youporngay.com|you-porn.com|youpornru.com
 |https://m.frgls.com/js/*.js?v=
 ||*.com/|$third-party,domain=youtubepro.app
@@ -51217,7 +51215,6 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||widgets.outbrain.com^$domain=apkmirror.com
 ||widgets.pinterest.com^
 ||widgets.progrids.com^
-||widgets.tourismusnetz.com/tn-cookie-widget.js
 ||widgets.tree.com^
 ||widiaoexhe.top^
 ||widow5blackfr.com^
@@ -55149,7 +55146,7 @@ zhaotianbao1.cn/*/ywy*.apk$~third-party
 ||zzzyk.com/js/
 !<<<<<域名规则 结束>>>>>
 
-!<<<<<网站单独规则>>>>>16467
+!<<<<<网站单独规则>>>>>16471
 $third-party,domain=hentai2read.com|porn-tube-club.com
 $third-party,~script,~stylesheet,domain=xs77.cc|xs77.com|xs77.buzz|xs77.cn|xs77.xyz
 $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube8.fr|xtube.com|youporn.com|youporngay.com
@@ -56821,7 +56818,6 @@ augsburger-allgemeine.de##.pt_onlinestory
 augsburger-allgemeine.de##div[data-ad-slot-native-mobile]
 augsburger-allgemeine.de##div[style="min-height:20338px;"]
 augsburger-allgemeine.de##main[role="main"] > div[style="min-height:20338px;"]
-aukey.com,bikopek.com##.fixed-cookie
 aulafacil.com##.faldon-cookies
 aulagear.com,bmz.de##.m-cookie-banner
 auo.com##.gdpr-mask
@@ -56902,6 +56898,7 @@ autozeitung.de##body .adAnything.dikr-responsive-ads-mca
 av.by##.journal-youtube
 av.movie##.adss-160x600
 av.ru##.av-cookie-banner
+avantorsciences.com,ekstraklasa.org##app-consent-banner
 avcanada.ca##.postbody > div[id^="post_content"] > .content ~ center
 avepdf.com###notif-cookie-consent
 avepdf.com##.notif-consent
@@ -58050,7 +58047,6 @@ celery-marine.net##.sp_above_sns
 celery-marine.net##.sp_below_header > div.textwidget > center
 ceneo.pl###js_cookie-consent-banner
 censor.net###usage_notice
-centar-tehnike.hr,valqua.co.jp,x-legend.com,planfix.ru,apacer.com,infograph.venngage.com,grabfreegames.com,redbook.com.au,kcpu.gov.pl,rodstewart.com,akademia.nfz.gov.pl,welchs.com,auo.com,plati.io,carsales.com.au,jff.jpf.go.jp,digiseller.com,hostzealot.com,club.autodoc.de,bezchemiinadrodze.pl,digiseller.market,plati.market,thefreedictionary.com,userway.org,royalenfield.com,oplata.info,gamehouse.com,phonemore.com,plati.ru,sputniknewslv.com,sputniknews.*,kosmogadka.pl,zwsoft.com,guneygundemi.com,spacex.com.pl,balen.com.tr,navi.gg,jus.com.br,paracevirici.com,inkstonenews.com,hibboux.com,glossika.com,bleachmx.fr,nytimes.com,bagdatbaharat.com.tr,foreignaffairs.com,tagmp3.net,arkadszeged.hu,basemark.com,eonline.com,gogoro.com,sydsvenskan.se,theatlas.com##.gdpr:not(#style_important)
 centauro.com.br##._pwlmmn
 centrum.cz##.strip
 cenyou.net##div[class*="push"]
@@ -58107,6 +58103,7 @@ chenzhongtech.com##div[data-log-action*="OPEN_APP"]
 cherryservers.com##[x-data="cookiesConsent"]
 cherryxtrfy.com##div[class^="cookies-policy"]
 cheshi.com##.ad_980105
+chesnok.media##.terms
 chess.org##.message-general > ul[style^="position:"]
 chessbase.com###askForCookies
 chessingtongardencentre.co.uk,ortlieb.com,shmh.de###hb-cc-wrap
@@ -58796,6 +58793,7 @@ deno.com,console.anthropic.com##.fixed.bottom-2
 denthelp.pl##.phpro-cookie-notice
 dentsu-pme.co.jp,dentsu.co.jp##.gdpr-bg
 depor.com##.ad-amp-movil
+deps.dev##div[style^="left: calc("][style*=" top: calc("][style$="position: fixed;"]
 der-ersatzteile-profi.de###coockiePoliy
 der-postillon.com##.iqadtile-wrapper
 der-postillon.com,ghacks.net##.mrf-cmp
@@ -59393,6 +59391,7 @@ eol.cn##.ad_490
 epaper.freepressjournal.in###ad-code-footer
 epaper.freepressjournal.in##.ad-bx
 epdf.pub###EPDFPUB_cookie_box
+epdf.tips##div[id$="_cookie_box"]
 epey.com###mobil_masthead
 epey.com##.tab:has(> div.cell > span.sponsormetni)
 epidemicsound.com###es-consent
@@ -60094,6 +60093,7 @@ fremdgehen69.com##.legal-cookiebar
 fresha.com##div[class*="Banner_banner_"]:has(> div[role="dialog"] > div > p > a[href$="/cookies"])
 freshauto.ru##.wrapp-cookie
 fresherslive.com##.mob_btm_sticky_ad
+freshplaza.de##.grey_background
 freshstream.com,twoje-lampy.pl,nsfavourites.nl,totalizator.pl,lotto.pl,steigenberger.com,aegon.nl##.cookie-wall
 friday.kodansha.co.jp##div[class*="stickyAdContainer"]
 friday.kodansha.co.jp##div[class^="styles_period"] > ol[class^="styles_rankingList"] > li:not([data-cx-position])
@@ -60453,6 +60453,7 @@ getnavi.jp##div[class="for-sp"][style^="text-align:center;"]
 getnews.jp###jp_gn_sp_gate_header
 gettr.com##.jss53
 gettranny.com,manysex.com,manysex.tube,sextu.com,xjav.tube##section[style="padding: 12px;"]
+gezondleven.be##.cookiebanner-overlay
 gfan.com##.art-ad
 gfan.com##.downs
 gfinityesports.com##.article-full__article-content > div[class]:has(> div.htl-inarticle-container)
@@ -62074,6 +62075,7 @@ itproger.com###cookies-hide
 its.porn##.desk-banners
 its.porn##.twocolumns > aside:not([class]):not([id]):has(> .table > div[class*="IPO-Itsporn_Native_"])
 its.porn,jizzez.net##.oneBanner
+itv.com###itv-glob-cookie-policy-holder
 itvbd.com##.widget_text_inner div:not([class],[id]) a[target="_blank"]:not([href*="youtube.com"]) > img
 itzine.ru##a[href="https://podcast.ru/1436711112"]
 ivacy.com##.gdpr-hellobar
@@ -62746,8 +62748,8 @@ koe-koe.com##.ad_min_height
 koe-koe.com##div[style="min-height:250px"]
 koe-koe.com,miercn.com##.ad_list
 koempf24.de##div[x-component="cookieConsent"]
-koenigsbrunn.de,hemhofen.de,mitteldithmarschen.de###privacy-container
 koenigsegg.com##section[data-component="n3-cookie-notice"]
+kohlhammer.de##.sc-gdpr
 koimoi.com###after_featured_image
 koiniom.com,radionatale.com,radionorthpole.com,radioamericalatina.com,radioitalianmusic.com,radioitaliacanada.com,miamibeachradio.com,radiosymphony.com,radiocountrylive.com,radioitalylive.com,radiolovelive.com,radionylive.com,radiorockon.com###cookieLawPro
 koinmedya.com##.amp-sticky-ads
@@ -62952,7 +62954,6 @@ leaks4fap.com##a[href*=".com/go.php?"]
 learn-c.org,learn-cpp.org,learn-golang.org,learn-html.org,learn-js.org,learn-perl.org,learn-php.org,learncs.org,learnjavaonline.org,learnpython.org,learnrubyonline.org,learnscala.org,learnshell.org,learnsqlonline.org###google-ad-right > div[class]:not(:has(> div > a[href]))
 learn.javascript.ru##.frontpage-content > section.frontpage-content__container:has(> div.frontpage-content__inner > div.subscribe)
 learnamp.com,losteria.net,btcdirect.eu,ku.dk,opensignal.com,stagecoachbus.com,nhsinform.scot,vwfs.de,pluswert.de,ico.org.uk,kit.co,jamieoliver.com###ccc
-learnpick.in##.gdpr_holder
 learntypescript.dev###gatsby-focus-wrapper > div > div:has(> a[href="/privacy"])
 lebiscuit.com.br##div[class*="modalcookie"]
 lectricebikes.com###shopify-section-custom-promo-popup
@@ -64573,7 +64574,6 @@ moeimg.net##div[class^="sp_ad"]
 mofosex.net##.bb_show_5
 moguravr.com##.mg-ads-mobile
 mojalekaren.sk##.inconsent-cc
-mojanorwegia.pl###new-cookies
 molbuk.ua###copyright
 molure.cn##.adplan
 momon-ga.com##.section-box:has(.list-box)
@@ -65419,6 +65419,7 @@ ocn.ne.jp##.clickSpeechBubbleArticle
 octavius.mail.ru##.application-mail__layout div.letter-list__react div[role="rowgroup"] > div[style^="height:"][style*="position:"][style*="top:"][style$="width: 100%;"]:not([class]):not([id])
 octoba.net##.contentbody > .post > div[style="height:100px;overflow:hidden;text-align:center;padding:1em 0 0 0;"]
 octoba.net##.sp-middle2-ads
+octobrowser.net,centar-tehnike.hr,valqua.co.jp,x-legend.com,planfix.ru,apacer.com,infograph.venngage.com,grabfreegames.com,redbook.com.au,kcpu.gov.pl,rodstewart.com,akademia.nfz.gov.pl,welchs.com,auo.com,plati.io,carsales.com.au,jff.jpf.go.jp,digiseller.com,hostzealot.com,club.autodoc.de,bezchemiinadrodze.pl,digiseller.market,plati.market,thefreedictionary.com,userway.org,royalenfield.com,oplata.info,gamehouse.com,phonemore.com,plati.ru,sputniknewslv.com,sputniknews.*,kosmogadka.pl,zwsoft.com,guneygundemi.com,spacex.com.pl,balen.com.tr,navi.gg,jus.com.br,paracevirici.com,inkstonenews.com,hibboux.com,glossika.com,bleachmx.fr,nytimes.com,bagdatbaharat.com.tr,foreignaffairs.com,tagmp3.net,arkadszeged.hu,basemark.com,eonline.com,gogoro.com,sydsvenskan.se,theatlas.com##.gdpr:not(#style_important)
 odds.am##.cs
 oddstrader.com###CookiesAlert
 odia.ig.com.br##.policy-cookies-banner
@@ -66080,6 +66081,7 @@ pocketpc.ch,gizchina.com,cleantechnica.com,proandroid.com,dkoding.in,iheartintel
 poczta.gazeta.pl,kontakty.onet.pl,poczta.onet.pl##div[class^="styles__SlotTopMobileStyled-"]
 poczta.gazeta.pl,kontakty.onet.pl,poczta.onet.pl##div[class^="styles__VirtualListStyled-"] > div[style] > div[class^="styles__RowWrapper-"] > div:not([class], [id]) > div[class^="styles__Slot"][class*="Ad-"]
 poder360.com.br##.box-banner-footer
+podimo.com##div[data-sentry-component="CookieConsent"]
 podorozhnik.spb.ru##.ppa-cookie-confirm-message
 podurama.com##.ant-notification
 poehalisnami.ua##.jsAgreeWithCookie
@@ -67277,7 +67279,6 @@ romsgames.net##[onclick^="javascript:window.open"][style^="background: #e7fbf6;"
 romspack.com,faindx.com,hentaiomg.com,laweekly.com,pridesource.com,alludemycourses.com,ipacrack.com,idevicecentral.com,hentaidude.tv,mymanagementguide.com,schooldrillers.com,aceofhacking.com,msftnext.com,thispointer.com,scienceabc.com,freesoft.id,winhelponline.com,indieshortsmag.com,kodi-tutorials.uk,ahegao.online,camwhores.co,wabetainfo.com,studydhaba.com,justlightnovels.com###custom_html-2
 romstal.ro,librarul.ro##.gdpr_popup
 roninwear.*###wrapper-dx-coki
-rooler.ua##.block_cookies
 root-nation.com###tdi_3
 root-nation.com###tdi_95
 rosal24.ru,tsb.org.tr,maxxroyal.com,secmarket.com.tr,marketcentral.hu,jfe-shoji.co.jp##.cookieModal
@@ -68624,7 +68625,6 @@ sunshinewaay.cn##img[class$="BnImg"]
 sunsky-online.com###cookiesHint_1
 suny.edu##.noCookieModal
 super-hobby.co.uk,super-hobby.de,super-hobby.be,super-hobby.at,super-hobby.it,super-hobby.pt,super-hobby.es,super-hobby.com,mojehobby.pl###_message-footer-close
-super-naradi.cz##div[data-selector="cookies-wrapper"]
 super.sina.cn##.call_up_banner
 superbet.ro##.coooooookie
 superchat.de##footer + div.fixed[class*="bottom"][style*="z-index"]
@@ -68633,6 +68633,7 @@ superlife.ca##.sidebar-ad-zone
 superluchas.com###AbovePostPlacementWrapper
 superluchas.com##.custom-html
 superluchas.com,mundokodi.com##div[id^="lx_"]
+supermagnete.de###klaro-overlay
 supermarktcheck.de##.product-details > section:not([class]):not([id])
 supermedia.pl,lesoleil.com,ledroit.com,lenouvelliste.ca,lequotidien.com,latribune.ca,lavoixdelest.ca##div[class^="cookies-banner"]
 supermicro.com###privacy-popup-agree
@@ -69874,7 +69875,6 @@ uwagakisimasuka.blog.fc2.com###entry_box > div:not([class]) > a[href^="https://a
 uwe.edu.pl,wsb-nlu.edu.pl,golddrop.eu,console-way.com,blachotrapez.eu,sklep-mietus.pl##.TsConsentWrapper
 uwr.edu.pl###bs-cookies-overlay
 uxcel.com##.cookie-banner-wrap
-uyelik.dr.com.tr##.dataBar
 uzairways.com##.notifyCookies
 uzmanparam.milliyet.com.tr##div[style="min-height: 250px;display: flex;justify-content: center;align-items: center;"]
 uzmanparam.milliyet.com.tr##div[style^="min-height: 250px;display: flex;justify-content: center;"]
@@ -69920,7 +69920,6 @@ veeam.com##.header-component__messages-overlay
 veepn.com##.cookie_privacy
 vegmart.cz,vegmart.sk##.bb-cookies-dialog-wrapper
 velken.de##.blur--bg
-velomarket.pl###m-cookie-block
 venturebeat.com##.medrec-wrapper
 veporn.com##.sidebar > div.widget_text
 veporn.com##.video-content > div.search_result + div[style="position: relative;width: 100%;background:transparent;"]
@@ -71105,6 +71104,7 @@ yahoo.com##li[class^="Bgc(geminiBgc)"]
 yahoo.com##li[data-test-locator="ntk-ad"]
 yahoo.com##li[data-test-locator="stream-related-ad-item"]
 yahoo.com##ul.stream-items > li[class=""]:not([data-wf-toggle-class]) > .stream-item[data-wf-beacons^="https://beap.gemini.yahoo.com/"]
+yakutia.info###personal_data_policy_card
 yamagata-np.jp##.ad_mobile_area
 yamano-hd.com,hkpm.org.hk,shimizu-group.co.jp,ovago.com,lingvanex.com,home.pl,samsung.com##.js-cookie
 yamareco.com##div[style^="position: fixed; bottom: 0; width: 100%; height: 50px; z-index: 9999"]
@@ -71599,6 +71599,7 @@ zuoyebang.com##div[class*="moreDialog_"]
 zuoyebang.com##div[class^="adCard_"]
 zuoyebang.com##div[class^="answerAnalyzeAd_"]
 zuoyebang.com##img[class^="bottomBanner_"]
+zurich.co.uk###static-cookie-policy-message
 zus.pl###main-cookie-dialog
 zvshk.de##.om-cookie-panel
 zvuk.com##div[class^="AcceptCookiePolicy_fixedWrapper"]
@@ -71619,7 +71620,7 @@ zywiec-zdroj.pl,postronienatury.pl,ekosystem.wroc.pl,ton.eu##div[class*="cookie-
 zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; position: relative; top: 0px; z-index: 9999;"]
 !<<<<<网站单独规则 结束>>>>>
 
-!<<<<<通用Css规则>>>>>6287
+!<<<<<通用Css规则>>>>>6289
 ###ADbox
 ###ADtip
 ###Ad-Container
@@ -72154,6 +72155,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ###box_advertisement
 ###box_advertisment
 ###box_articlead
+###box_cookie_info
 ###box_text_ads
 ###boxad
 ###boxads
@@ -72179,7 +72181,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ###buySellAds
 ###buysellads
 ###buzzblogpro-cookie-banner
-###bw_cookiechoice
 ###ca_banner
 ###ca_info_plus
 ###cadre_alert_cookies
@@ -72293,7 +72294,6 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ###cookie-notice
 ###cookie-notification
 ###cookie-notification-bar
-###cookie-notification-wrapper
 ###cookie-notifier
 ###cookie-opt-in
 ###cookie-optout
@@ -72400,6 +72400,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ###cookie_banner_container
 ###cookie_bar
 ###cookie_box
+###cookie_choice
 ###cookie_consent
 ###cookie_consent_container
 ###cookie_content
@@ -72426,6 +72427,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ###cookie_str
 ###cookie_warn
 ###cookie_warning
+###cookie_widget
 ###cookieaccept
 ###cookiealert
 ###cookiebanner
@@ -75770,6 +75772,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 ##.wrapper_advertisement
 ##.wrapperad
 ##.wsa-cookielaw
+##.wtm-cookies
 ##.wumii-bottom-popup
 ##.wumii-widget-ad
 ##.wwads
@@ -78581,7 +78584,7 @@ zzyiwan.com##div[style="width: 100%; overflow: hidden; padding-top: 0px; positio
 @@||cdn.opencmp.net/publisher/$domain=come-on.de|fr.de|tz.de
 @@||cdn.opencmp.net/tcf-v2$domain=come-on.de|merkur.de
 @@||cdn.opencmp.net/tcf-v2/$domain=fr.de|tz.de
-@@||cdn.opencmp.net/tcf-v2/cmp-stub-latest.js$domain=heidelberg24.de|hna.de
+@@||cdn.opencmp.net/tcf-v2/cmp-stub-latest.js$domain=hallo-eltern.de|heidelberg24.de|hna.de
 @@||cdn.opencmp.net^$domain=promipool.de|serienjunkies.de
 @@||cdn.preferred.tech/cookie-consent.*.js$domain=typing.playgram.jp
 @@||cdn.privacy-mgmt.com/*businessinsider.com$domain=businessinsider.com
