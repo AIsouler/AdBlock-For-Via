@@ -38,6 +38,9 @@ sed -Ei '/\$document/d' "${Sort_Folder}/rules/拦截H转跳.txt"
 #合并预处理规则
 Combine_adblock_original_file "${Rules_Folder}/AdBlockForVia.txt" "${Sort_Folder}/rules"
 
+#去除转换popup选定器，直接改用||域名^的形式。
+wipe_fiter_popup_domain "${Rules_Folder}/AdBlockForVia.txt"
+
 #规则小修
 fix_Rules "${Rules_Folder}/AdBlockForVia.txt" '\$popup,domain=racaty\.io,0123movie\.ru' '\$popup,domain=racaty\.io\|0123movie\.ru'
 fix_Rules "${Rules_Folder}/AdBlockForVia.txt" '##aside:-abp-has' '#\?#aside:-abp-has'
