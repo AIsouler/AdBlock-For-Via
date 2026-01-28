@@ -1,8 +1,16 @@
 # AdBlock-For-Via
 
-自用的适合Via浏览器的去广告规则，每12小时更新一次，修改自上游仓库，移除混合规则全量版生成逻辑，仅生成适合Via的精简版规则，相比上游混合规则精简版新增了几个规则源，如果遇到问题请去上游规则反馈
+适合 **Via 浏览器** 的广告拦截规则
 
 ---
+
+## 说明
+
+- 本仓库修改自上游仓库，移除混合规则全量版生成逻辑
+- 规则每 **12 小时自动更新一次**
+- 在上游 **混合规则精简版** 的基础上新增了几个规则源
+- 仅包含 **Via浏览器** 支持的规则语法
+- 若遇到误拦截或漏拦截问题，请向对应上游规则反馈
 
 ## 规则链接
 
@@ -12,7 +20,7 @@
 https://raw.githubusercontent.com/AIsouler/AdBlock-For-Via/refs/heads/main/Rules/AdBlockForVia.txt
 ```
 
-- 国内加速链接（同步可能不及时）
+- 国内加速链接（可能存在同步延迟）
 
 ```txt
 https://cdn.jsdelivr.net/gh/AIsouler/AdBlock-For-Via@main/Rules/AdBlockForVia.txt
