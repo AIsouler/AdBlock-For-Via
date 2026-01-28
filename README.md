@@ -12,7 +12,7 @@
 https://raw.githubusercontent.com/AIsouler/AdBlock-For-Via/refs/heads/main/Rules/AdBlockForVia.txt
 ```
 
-- 国内加速链接
+- 国内加速链接（同步可能不及时）
 
 ```txt
 https://cdn.jsdelivr.net/gh/AIsouler/AdBlock-For-Via@main/Rules/AdBlockForVia.txt
